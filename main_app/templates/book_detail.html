@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div>
+    <h2>{{book.author}} - {{book.title}}</h2>
+    <img src="#" alt="booklist cover">
+    <form action="{% url 'delete-book' book.id %}">
+        <button>Delete</button>
+    </form>
+</div>
+
+
+{% endblock %}

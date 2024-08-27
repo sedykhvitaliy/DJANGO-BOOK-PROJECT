@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>{{ booklist.title }}</h1>
+
+<ul>
+    {% for book in books %}
+    <li>
+        <a href="/library/{{book.id}}">{{book.artist}} - {{book.title}}</a>
+        <span><form action="/booklists/{{booklist.id}}/remove-book/{{book.id}}"><button>Remove Book</button></form></span>
+    </li>
+    {% endfor %}
+</ul>
+
+<form action="/booklists/{{booklist.id}}/update">
+    <button>Add a book to "{{booklist.title}}"</button>
+</form>
+
+<form action="/booklists/{{booklist.id}}/delete">
+    <button>Delete Booklist</button>
+</form>
+
+
+    {% endblock %}

@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <nav>
+    {% if user.is_authenticated %}
+        <div class="nav-main">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+            <a href="{% url 'create-book' %}" class="nav-link">Add Book</a>
+            <a href="{% url 'create-booklist' %}" class="nav-link">Create BookList</a>
+            <a href="{% url 'playlists' %}" class="nav-link">BookLists</a>
+            <a href="{% url 'library' %}" class="nav-link">Library</a>
+            <form id="logout-form" method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Log out</button>
+            </form>
+        </div>
+    {% else %}
+        <div class="nav-auth">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+            <a href="{% url 'sign-in' %}" class="nav-link">Sign In</a>
+            <a href="{% url 'sign-up' %}" class="nav-link">Sign Up</a>
+            </form>
+        </div>
+    {% endif %}
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>

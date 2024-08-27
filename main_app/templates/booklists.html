@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>BookLists</h1>
+
+<div>
+    {% for booklist in booklists %}
+    <a href="/booklists/{{booklist.id}}">{{booklist.title}}</a>
+    {% endfor %}
+</div>
+
+<form action="{% url 'create-booklist' %}">
+    <button>Create a booklist</button>
+</form>
+
+{% endblock %}
