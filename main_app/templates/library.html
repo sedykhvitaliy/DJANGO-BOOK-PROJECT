@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/library.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <h1>Library</h1>
 
 <ul>
     {% for book in books %}
-    <li><a href="{{book.id}}">{{book.author}} - {{book.title}}</a></li>
+    <li><a href="{{ book.id }}">{{ book.author }} - {{ book.title }}</a></li>
     {% endfor %}
 </ul>
-
-
 
 <form action="{% url 'create-book' %}">
     <button>Add a book</button>
 </form>
 
 {% endblock %}
+
+

@@ -1,0 +1,169 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+.edit-title-form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-title-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.edit-title-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.edit-title-form .btn.update {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-title-form .btn.update:hover {
+    background-color: #218838;
+}
+
+ul {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+ul li .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+ul li .btn.remove {
+    background-color: #dc3545;
+    color: white;
+}
+
+ul li .btn.remove:hover {
+    background-color: #c82333;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+form .btn.add, form .btn.delete {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+form .btn.add {
+    background-color: #007bff;
+}
+
+form .btn.add:hover {
+    background-color: #0056b3;
+}
+
+form .btn.delete {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+form .btn.delete:hover {
+    background-color: #c82333;
+}
+
+.edit-title-form {
+    margin-bottom: 20px;
+}
+
+.edit-title-form label {
+    font-weight: bold;
+}
+
+.edit-title-form input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn.update {
+    background-color: #2196F3;
+}
+
+.btn.remove {
+    background-color: #f44336;
+}
+
+.btn.add {
+    background-color: #4CAF50;
+}
+
+.btn.delete {
+    background-color: #f44336;
+}

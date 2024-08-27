@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/book_edit.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h2>Edit Book: {{ book.title }}</h2>
+
+<form action="{% url 'update-book' book.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn update">Update Book</button>
+</form>
+
+{% endblock %}

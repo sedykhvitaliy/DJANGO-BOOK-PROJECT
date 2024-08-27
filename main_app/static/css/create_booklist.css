@@ -1,0 +1,48 @@
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-container table td {
+    padding: 10px;
+}
+
+.form-container table input[type="text"],
+.form-container table input[type="email"],
+.form-container table input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container button.btn.submit {
+    background-color: #2196F3; /* Синий */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button.btn.submit:hover {
+    background-color: #1976D2; /* Темнее синий при наведении */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}

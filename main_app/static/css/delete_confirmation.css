@@ -1,0 +1,47 @@
+
+.form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.form h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.form .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form .btn.secondary {
+    background-color: #f4f4f4; /* Светлый фон для кнопки отмены */
+    color: #333;
+}
+
+.form .btn.secondary:hover {
+    background-color: #ddd; /* Тонкая тень при наведении */
+}
+
+.form .btn.danger {
+    background-color: #f44336; /* Красный фон для кнопки удаления */
+    color: white;
+}
+
+.form .btn.danger:hover {
+    background-color: #d32f2f; /* Темнее красный при наведении */
+}

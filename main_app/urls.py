@@ -1,15 +1,18 @@
 from django.contrib import admin
 from django.urls import include, path
+from django.contrib.auth.views import LogoutView
 from . import views
 
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('logout/', LogoutView.as_view(), name='sign-out'),
     path('signin/', views.SignIn.as_view(), name='sign-in'),
     path('accounts/signup', views.signup, name='sign-up'),
     path('library/', views.library, name='library'),
     path('library/<int:book_id>', views.book_detail),
     path('library/add/', views.CreateBook.as_view(), name='create-book'),
+    path('library/<int:pk>/update/', views.UpdateBook.as_view(), name='update-book'),
     path('library/<int:pk>/delete/', views.DeleteBook.as_view(), name='delete-book'),
     path('booklists/', views.booklists, name='booklists'),
     path('booklists/<int:booklist_id>', views.booklist_detail, name='booklist-detail'),

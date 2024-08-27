@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/booklist_edit.css' %}">
+{% endblock %}
+
 {% block content %}
+
+<h1>Edit Booklist</h1>
 
 <h1>{{ booklist.title }}</h1>
 
@@ -9,18 +15,23 @@
     {% for book in books %}
     <li>
         <a href="/library/{{book.id}}">{{book.artist}} - {{book.title}}</a>
-        <span><form action="/booklists/{{booklist.id}}/remove-book/{{book.id}}"><button>Remove Book</button></form></span>
+        <span>
+            <form action="/booklists/{{booklist.id}}/remove-book/{{book.id}}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn remove">Remove Book</button>
+            </form>
+        </span>
     </li>
     {% endfor %}
 </ul>
 
-<form action="/booklists/{{booklist.id}}/update">
-    <button>Add a book to "{{booklist.title}}"</button>
+<form action="{% url 'update-booklist' booklist.id %}">
+    <button class="btn add">Add a book to "{{booklist.title}}"</button>
 </form>
 
-<form action="/booklists/{{booklist.id}}/delete">
-    <button>Delete Booklist</button>
+<form action="{% url 'delete-booklist' booklist.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn delete">Delete Booklist</button>
 </form>
 
-
-    {% endblock %}
+{% endblock %}

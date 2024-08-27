@@ -1,0 +1,47 @@
+/* base.css */
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.nav-main, .nav-auth {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-logout {
+    display: inline;
+}
+
+.btn {
+    background-color: #f44;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn.logout {
+    background-color: #f44;
+}
+
+.btn.logout:hover {
+    background-color: #d33;
+}
+
+.btn.logout:focus {
+    outline: none;
+}

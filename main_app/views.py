@@ -12,7 +12,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def home(request):
-    return render(request, 'home.html')
+    latest_books = Book.objects.order_by('-id')[:5]  
+    return render(request, 'home.html', {'latest_books': latest_books})
 
 
 class SignIn(LoginView):
@@ -46,7 +47,7 @@ def booklists(request):
 @login_required
 def booklist_detail(request, booklist_id):
     booklist = BookList.objects.get(id=booklist_id)
-    bookss = booklist.books.all()
+    books = booklist.books.all()
     return render(request, 'booklist_detail.html', {
         'booklist': booklist,
         'books': books,
@@ -78,6 +79,11 @@ class DeleteBook(LoginRequiredMixin, DeleteView):
     model = Book
     success_url = '/library/'
 
+class UpdateBook(LoginRequiredMixin, UpdateView):
+    model = Book
+    fields = ['title', 'author']
+    template_name = 'book_edit.html'
+    success_url = '/library/'
 
 class CreateBookList(LoginRequiredMixin, CreateView):
     model = BookList

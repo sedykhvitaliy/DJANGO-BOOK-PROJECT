@@ -1,5 +1,10 @@
 {% extends 'base.html' %}  
 {% load static %} 
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/delete_book.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <h2>Are you sure you want to delete {{ book.title }}?</h2>

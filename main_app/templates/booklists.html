@@ -1,18 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/booklists.css' %}">
+{% endblock %}
+
 {% block content %}
 
-<h1>BookLists</h1>
+<h1>Book Lists</h1>
 
-<div>
+<div class="booklists">
     {% for booklist in booklists %}
-    <a href="/booklists/{{booklist.id}}">{{booklist.title}}</a>
+    <div class="booklist-item">
+        <a href="/booklists/{{ booklist.id }}">{{ booklist.title }}</a>
+    </div>
     {% endfor %}
 </div>
 
-<form action="{% url 'create-booklist' %}">
-    <button>Create a booklist</button>
+<form action="{% url 'create-booklist' %}" method="get">
+    <button type="submit" class="btn create">Create a Booklist</button>
 </form>
 
 {% endblock %}

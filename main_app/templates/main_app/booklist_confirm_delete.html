@@ -1,5 +1,10 @@
 {% extends 'base.html' %}  
 {% load static %} 
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/delete_confirmation.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <h2>Are you sure you want to delete {{ booklist.title }}?</h2>
