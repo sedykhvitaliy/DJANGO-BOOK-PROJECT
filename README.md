@@ -40,7 +40,7 @@ To run this project locally, follow these steps:
 ## Attributions
 
 - **Django**: A high-level Python web framework that simplifies the development of web applications.
-- **Bootstrap**: A front-end framework used for styling the application.
+
 
 ## Technologies Used
 
