@@ -9,8 +9,7 @@
 
 <h1>Sign In</h1>
 
-<form action="{% url 'signin' %}" method="post" class="login">
-    <h1>Login</h1>
+<form action="{% url 'sign-in' %}" method="post" class="login">
     {% csrf_token %} 
     {{ form.as_p }}
     <input type="hidden" name="next" value="{{ next }}" />

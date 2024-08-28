@@ -143,27 +143,31 @@ form .btn.delete:hover {
 }
 
 .btn {
-    padding: 10px 15px;
-    margin: 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    background-color: #4CAF50; 
+    margin-bottom: 10px; 
+    padding: 10px 20px;
     border-radius: 5px;
+    border: none;
+    color: white;
     cursor: pointer;
 }
 
-.btn.update {
-    background-color: #2196F3;
-}
-
 .btn.remove {
-    background-color: #f44336;
+    background-color: #f44336; 
 }
 
 .btn.add {
-    background-color: #4CAF50;
+    background-color: #008CBA; 
 }
 
 .btn.delete {
-    background-color: #f44336;
+    background-color: #e7e7e7; 
+    color: black;
 }
+
+.buttons {
+    display:flex;
+    flex-direction: space-betweek;
+    margin-top: 10px;
+    margin-right: 50px;
+    }

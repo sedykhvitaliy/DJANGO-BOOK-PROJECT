@@ -7,8 +7,6 @@
 
 {% block content %}
 
-<h1>Edit Booklist</h1>
-
 <h1>{{ booklist.title }}</h1>
 
 <ul>
@@ -24,11 +22,11 @@
     </li>
     {% endfor %}
 </ul>
-
+<div class='buttons'>
 <form action="{% url 'update-booklist' booklist.id %}">
     <button class="btn add">Add a book to "{{booklist.title}}"</button>
 </form>
-
+</div>
 <form action="{% url 'delete-booklist' booklist.id %}" method="post">
     {% csrf_token %}
     <button type="submit" class="btn delete">Delete Booklist</button>

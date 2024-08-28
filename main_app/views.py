@@ -96,7 +96,11 @@ class CreateBookList(LoginRequiredMixin, CreateView):
 
 class UpdateBookList(LoginRequiredMixin, UpdateView):
     model = BookList
-    fields = ['books']
+    fields = ['title', 'books']
+    
+    def form_valid(self, form):
+        form.instance.books.add(*form.cleaned_data['books'])
+        return super().form_valid(form)
 
 
 @login_required
