@@ -1,6 +1,6 @@
 # Book Library App
 
-![Book Library Screenshot](path/to/screenshot.png) 
+![Book Library Screenshot](https://i.imgur.com/YquwOX9.png) 
 
 ## Description
 
