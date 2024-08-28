@@ -18,11 +18,11 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/book-library-app.git
+    git clone https://github.com/sedykhvitaliy/django-book-project.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd book-library-app
+    cd bookproject
     ```
 3. Install the required dependencies:
     ```bash
@@ -31,10 +31,6 @@ To run this project locally, follow these steps:
 4. Apply migrations:
     ```bash
     python manage.py migrate
-    ```
-5. Create a superuser (if needed):
-    ```bash
-    python manage.py createsuperuser
     ```
 6. Run the development server:
     ```bash
