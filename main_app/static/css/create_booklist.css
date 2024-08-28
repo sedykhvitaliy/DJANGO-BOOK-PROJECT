@@ -28,7 +28,7 @@
 }
 
 .form-container button.btn.submit {
-    background-color: #2196F3; /* Синий */
+    background-color: #2196F3; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -39,7 +39,7 @@
 }
 
 .form-container button.btn.submit:hover {
-    background-color: #1976D2; /* Темнее синий при наведении */
+    background-color: #1976D2; 
 }
 
 h1 {

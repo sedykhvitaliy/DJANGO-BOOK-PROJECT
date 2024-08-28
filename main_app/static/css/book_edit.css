@@ -1,4 +1,3 @@
-/* static/css/book_edit.css */
 .book-edit {
     max-width: 600px;
     margin: 20px auto;
@@ -28,7 +27,7 @@ form input[type="text"] {
 }
 
 .btn.update {
-    background-color: #4CAF50; /* Зеленый */
+    background-color: #4CAF50; 
     color: white;
     padding: 10px;
     border: none;
@@ -37,5 +36,5 @@ form input[type="text"] {
 }
 
 .btn.update:hover {
-    background-color: #45a049; /* Темнее зеленый при наведении */
+    background-color: #45a049; 
 }
