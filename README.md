@@ -10,7 +10,7 @@ This application was built to provide an easy-to-use interface for book enthusia
 
 ## Getting Started
 
-- **Planning Materials**: [Planning Documents](http://example.com) 
+- **Planning Materials**: [Planning Documents](https://trello.com/b/zWmOBXSf/book-project-planning) 
 
 ### Installation
 
